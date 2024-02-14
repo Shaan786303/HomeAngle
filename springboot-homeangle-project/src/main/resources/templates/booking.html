@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Booking</title>
+	<link rel="stylesheet" href="css/style1.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body class="bac">
+
+	<div class="container my-2">
+		<h1 class="bold">BOOKING'S LIST</h1>
+		<a th:href="@{/}" class="btn btn-primary btn-sm mb-3"> BOOK AGAIN </a>
+		<table border="1" class="table table-striped table-dark">
+			<thead>
+				<tr>
+					<th>Booking_Id</th>
+					<th>Booking_Date</th>
+					<th>Booking_Status</th>
+					<th> Actions </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="booking : ${listBooking}">
+					<td th:text="${booking.id}"></td>
+					<td th:text="${booking.date}"></td>
+					<td th:text="${booking.status}"></td>
+					<td> <a th:href="@{/}" class="btn btn-primary" onclick="return confirm()">Confirm Book</a>
+						<a th:href="@{/deleteBooking/{id}(id=${booking.id})}" class="btn btn-danger">Cancel Book</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		function confirm() {
+			alert("HandyMan Booked Successfully");
+		}
+	</script>
+</body>
+
+</html>

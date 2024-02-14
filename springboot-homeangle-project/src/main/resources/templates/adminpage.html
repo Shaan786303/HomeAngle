@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Admin</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+	<header class="header">
+		<a th:href="@{/}">
+			<div class=logo><img src="image/logo.png"></div>
+		</a>
+		<nav class="nav">
+			<a class="active"><i class='bx bxs-home'></i>ADMIN</a>
+			<a th:href="@{/profilepage}"><i class='bx bxs-user-circle'></i>USER PROFILE</a>
+			<a th:href="@{/bookingpage}"><i class='bx bxs-user-circle'></i>BOOKINGS</a>
+		</nav>
+	</header>
+
+	<section class="hanman" id="hanman">
+		<h2>ADMIN</h2>
+
+		<div class="style-content">
+			<div class="style-box">
+				<img src="image/electrician.png" alt="">
+				<div class="style-layer">
+					<a th:href="@{/showelectrician}">
+						<h4>ELECTRICIAN</h4>
+					</a>
+					<p>An electrician is a person whose job is to install and repair electrical equipment. Ready to help
+						U
+					</p>
+				</div>
+			</div>
+
+			<div class="style-box">
+				<img src="image/plumber.png" alt="">
+				<div class="style-layer">
+					<a th:href="@{/showplumber}">
+						<h4>PLUMBER</h4>
+					</a>
+					<p>A plumber is someone whose job includes fixing pipes and installing water and sewage systems.
+						Ready
+						to help U</p>
+				</div>
+			</div>
+
+			<div class="style-box">
+				<img src="image/carpenter.png" alt="">
+				<div class="style-layer">
+					<a th:href="@{/showcarpenter}">
+						<h4>CARPENTER</h4>
+					</a>
+					<p>A carpenter is a person who makes and repairs wooden objects and structures. Ready to help U</p>
+				</div>
+			</div>
+
+			<div class="style-box">
+				<img src="image/painter.png" alt="">
+				<div class="style-layer">
+					<a th:href="@{/showpainter}">
+						<h4>PAINTER</h4>
+					</a>
+					<p>A painter is a person who paints and decorates houses. Ready to help U</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer-text">
+			<p><i class='bx bxs-copyright'></i>Copyright 2024 | All Rights Reserved</p>
+		</div>
+		<div class="footer-topIcon">
+			<a href="#hanman"><i class='bx bxs-up-arrow-square'></i></a>
+		</div>
+	</footer>
+</body>
+
+</html>

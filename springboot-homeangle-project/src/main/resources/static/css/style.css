@@ -1,0 +1,408 @@
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+
+
+:root {
+	--bg-color: #020b3b;
+	--second-bg-color: #4d0258;
+
+	/* /* --bg-color:#1f242d; */
+	/* --second-bg-color:#323946; */
+	--text-color: #fff;
+	--main-color: rgb(120, 203, 250);
+	/* --main-color:rgb(68, 248, 203); */
+
+}
+
+body {
+	height: 100vh;
+	background-image: linear-gradient(to right, rgb(5, 150, 218), rgb(235, 20, 56), rgb(255, 168, 6));
+}
+
+section
+{
+    min-height: 100vh;
+    padding:10rem 10% 2rem;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 1%;
+	z-index: 100;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.473)), url(/image/Happy.bmp);
+}
+
+.logo img {
+	height: 8vh;
+	margin-left: 1vh;
+}
+
+nav a {
+	color: var(--text-color);
+	padding: 1rem;
+	font-size: 1.25rem;
+	position: relative;
+	right: 10vh;
+	transition: 0.3s ease-in;
+	text-decoration: none;
+}
+
+
+nav i {
+	font-size: 1.5rem;
+	padding: 5px;
+}
+
+.active,
+.nav a:hover {
+	color: var(--main-color);
+	font-size: 1.5rem;
+	box-shadow: 0 0 10px 5px black;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+.banner-container {
+	background-image: url("/image/handyman.jpg");
+	background-attachment:fixed;
+	background-size: cover;
+	box-shadow: inset 0 0 0 2000px #1c1c1c7a;
+	text-align: center;
+	align-items: center;
+	padding: 300px;
+}
+
+.banner-container h1 {
+	font-size: 5rem;
+	font-family: showcard gothic;
+	position: relative;
+	bottom: 20vh;
+	font-weight: 500;
+	color: transparent;
+	background: url(/image/rgb.png);
+	background-clip: text;
+	background-position: 0 0;
+	animation: rgb 20s linear infinite;
+}
+
+@keyframes rgb {
+	100% {
+		background-position: 2000px 0;
+	}
+}
+
+.banner-container h2 {
+	position: relative;
+	bottom: 20vh;
+	text-shadow: 5px 5px rgb(71, 72, 96);
+	color: rgb(225, 223, 221);
+	font-family: serif;
+	font-size: 40px;
+}
+
+.hman {
+	text-shadow: 5px 5px rgb(71, 72, 96);
+	color: rgb(225, 223, 221);
+	margin-top: 2%;
+	margin-bottom: 2%;
+	font-size: 28px;
+	font-family: showcard gothic;
+	text-decoration: underline wavy;
+	text-align: center;
+}
+
+
+.hanman {
+	text-shadow: 5px 5px rgb(71, 72, 96);
+	color: rgb(225, 223, 221);
+	font-size: 28px;
+	font-family: showcard gothic;
+	text-decoration: underline wavy;
+	text-align: center;
+}
+
+.style-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+}
+
+.style-content .style-box {
+	position: relative;
+	border-radius: 2rem;
+	box-shadow: 0 7px 15px rgb(0, 0, 0);
+	background-image: linear-gradient(rgb(0,0,0,0.300), rgba(0, 0, 0, 0.300)), url(/image/floor.jpg);
+	background-size: cover;
+	margin-top: 5%;
+	margin-left: 15%;
+	margin-bottom: 5%;
+	overflow: hidden;
+	display: flex;
+	width: 70%;
+	height: 50vh;
+}
+
+.style-box img {
+	width: 70%;
+	height: 50vh;
+	transition: .5s ease-in;
+}
+
+.style-box img:hover {
+	transform: scale(1.1);
+}
+
+.style-box .style-layer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	padding: 0 1rem;
+	transform: translateY(100%);
+	transition: .5s ease-in;
+	box-shadow: 0 0 50px var(--main-color);
+	cursor: pointer;
+}
+
+.style-box:hover .style-layer {
+	transform: translateY(0);
+}
+
+.style-layer h4 {
+	font-size: 2rem;
+	font-family: algerian;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 5px 5px rgb(187, 187, 255);
+	position: relative;
+	right: 3vh;
+}
+
+.style-layer h4:hover {
+	font-size: 2.5rem;
+	text-shadow: 5px 5px rgb(247, 239, 4);
+}
+
+.style-layer p {
+	font-size: 1.4rem;
+	font-family: serif;
+	font-weight: bold;
+	position: relative;
+	right: 3vh;
+}
+
+.container {
+	width: 100%;
+	height: 110vh;
+	font-family: sans-serif;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	width: 350px;
+	height: 470px;
+	box-shadow: 0 0 50px black;
+	perspective: 1000px;
+	border-radius: 20px;
+
+}
+
+.inner-box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.login,
+.register {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: justify;
+	background-size: cover;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.200), rgba(0, 0, 0, 0.200)), url(/image/rainbow\ 2.jpg);
+	padding: 55px;
+	box-sizing: border-box;
+	backface-visibility: hidden;
+	border-radius: 20px;
+}
+
+.card h2 {
+	font-weight: normal;
+	font-size: 20px;
+	font-family: elephant;
+	text-align: center;
+	margin-top: -10px;
+}
+
+.input {
+	width: 100%;
+	background: transparent;
+	border: 1px solid #fff;
+	margin: 5px 0;
+	height: 32px;
+	border-radius: 20px;
+	padding: 0 10px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 10px;
+	text-align: center;
+	font-family: elephant;
+	color: white;
+}
+
+.input:hover {
+	background-image: linear-gradient(red, yellow);
+}
+
+::placeholder {
+	color: #fff;
+	font-size: 12px;
+}
+
+button {
+	width: 100%;
+	background: transparent;
+	border: 1px solid #fff;
+	margin: 35px 0 10px;
+	height: 32px;
+	font-size: 12px;
+	border-radius: 20px;
+	padding: 0 10px;
+	box-sizing: border-box;
+	outline: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover {
+	background-image: linear-gradient(red, rgb(57, 198, 184));
+}
+
+.sbutton {
+	position: relative;
+	margin: 10px auto;
+	display: inline-block;
+}
+
+.sbutton::after {
+	content: '\27a4';
+	color: rgb(20, 211, 195);
+	line-height: 32px;
+	font-size: 17px;
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	right: -1px;
+	top: -1px;
+}
+
+span {
+	font-size: 13px;
+	margin-left: 12px;
+}
+
+.card .btn {
+	margin-top: 20px;
+
+}
+
+.card a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	font-size: 13px;
+	margin-top: 8px;
+}
+
+#icon {
+	text-align: center;
+}
+
+#icon ul {
+	display: inline-flex;
+	margin-top: 6%;
+	list-style: none;
+}
+
+#icon ul li {
+	color: white;
+	font-size: 16px;
+	padding: 16px;
+}
+
+#icon p {
+	/* margin-top: 5%; */
+	position: relative;
+	top: 4vh;
+	font-family: serif;
+	font-weight: bold;
+}
+
+#icon ul li:hover {
+	background-image: linear-gradient(red, yellow);
+	border-radius: 100%;
+	font-size: 24px;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1rem 5%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.473)), url(/image/Happy.bmp);
+}
+
+.footer-text p {
+	font-size: 1.2rem;
+	color: white;
+}
+
+.footer-text i {
+	padding: .1rem;
+}
+
+.footer-topIcon a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	background: black;
+	border-radius: .8rem;
+	transition: .5s ease;
+    text-decoration: none;
+}
+
+.footer-topIcon a:hover {
+	box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-topIcon a i {
+	font-size: 1.5rem;
+	color: var(--main-color);
+}

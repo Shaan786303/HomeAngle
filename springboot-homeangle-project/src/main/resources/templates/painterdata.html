@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PAINTER DATA</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/style1.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+	<header class="header">
+		<a th:href="@{/}">
+			<div class=logo><img src="image/logo.png"></div>
+		</a>
+		<nav class="nav">
+			<a class="active"><i class='bx bxs-user'></i>PAINTERS</a>
+			<a th:href="@{/feedbackpage}"><i class='bx bxs-edit-alt'></i>FEEDBACK</a>
+		</nav>
+	</header>
+
+	<section id="up">
+
+		<div class="hman">
+			<h2>PAINTER'S</h2>
+		</div>
+
+		<div class="card-container">
+			<div class="card">
+				<div class="card-header">
+					<img src="image/p1.png" alt="Card Image">
+				</div>
+				<div class="card-body">
+					<h2>Jack</h2>
+					<p>Experience : 3yrs</p>
+					<p>Fees : Rs-300</p>
+					<a th:href="@{/addbooking}"><button>BOOK NOW</button></a>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-header">
+					<img src="image/p2.png" alt="Card Image">
+				</div>
+				<div class="card-body">
+					<h2>Jerry</h2>
+					<p>Experience : 5yrs</p>
+					<p>Fees : Rs-500</p>
+					<a th:href="@{/addbooking}"><button>BOOK NOW</button></a>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-header">
+					<img src="image/p3.png" alt="Card Image">
+				</div>
+				<div class="card-body">
+					<h2>kim</h2>
+					<p>Experience : 4yrs</p>
+					<p>Fees : Rs-400</p>
+					<a th:href="@{/addbooking}"><button>BOOK NOW</button></a>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<footer class="footer">
+		<div class="footer-text">
+			<p><i class='bx bxs-copyright'></i>Copyright 2024 | All Rights Reserved</p>
+		</div>
+		<div class="footer-topIcon">
+			<a href="#up"><i class='bx bxs-up-arrow-square'></i></a>
+		</div>
+	</footer>
+</body>
+
+</html>

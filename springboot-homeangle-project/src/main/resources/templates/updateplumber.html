@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Update</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     </head>
+     <body>
+
+        <div class="container" id="container">
+            <div class="card">
+            <div class="inne,r-box" id="card">
+                 <div class="register">
+                        <h2>UPDATE PLUMBER</h2>
+                        <form action="#" th:action="@{/saveplumber}" th:object="${updateplum}" method="POST">
+                            <input type="hidden" th:field="*{id}">
+                            <input type="text" th:field="*{name}" placeholder="Name" title="Enter Name"  class="input" required>
+                            <input type="email" th:field="*{email}" placeholder="Email" title="Enter Email"  class="input" required>
+                            <input type="text" th:field="*{contact}" placeholder="Contact" title="Enter Contact" class="input" required>
+                            <input type="text" th:field="*{address}" placeholder="Address" title="Enter Address"  class="input" required>
+                            <input type="text" th:field="*{experience}" placeholder="Experience" title="Enter Experience"  class="input" required>
+                            <input type="number" th:field="*{fees}" placeholder="Fees" title="Enter Fees"  class="input" required>
+                            <button type="submit" class="sbutton" title="Update">Update</button>  
+                        </form>
+                 </div>
+            </div>
+            </div>
+        </div>
+
+    </body>
+</html>

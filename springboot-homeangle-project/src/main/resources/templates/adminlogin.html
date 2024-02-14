@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+	<header class="header">
+		<a th:href="@{/}">
+			<div class=logo><img src="image/logo.png"></div>
+		</a>
+		<nav class="nav">
+			<a class="active"><i class='bx bx-home'></i>LOGIN</a>
+		</nav>
+	</header>
+
+	<div class="icon">
+		<div class="container" id="container">
+			<div class="card">
+				<div class="inner-box" id="card">
+					<div class="login">
+						<h2>ADMIN LOGIN</h2>
+						<form action="#" th:action="@{/savelogins}" th:object="${adminlogins}" method="POST"
+							onsubmit="return validate()">
+							<input type="text" th:field="*{userid}" placeholder="AdminID" title="Enter UserId" id="id"
+								class="input">
+							<input type="password" th:field="*{password}" placeholder="Password" title="Enter Password"
+								id="password" class="input">
+							<button type="submit" class="sbutton" title="Login">LOGIN</button>
+
+						</form>
+						<div id="icon">
+							<ul>
+								<a href="https://accounts.google.com">
+									<li><i class="fa fa-google"></i></li>
+								</a>
+								<a href="https://www.gmail.com">
+									<li><i class="fa fa-envelope"></i></li>
+								</a>
+								<a href="https://www.instagram.com">
+									<li><i class="fa fa-instagram"></i></li>
+								</a>
+								<a href="https://www.facebook.com">
+									<li><i class="fa fa-facebook"></i></li>
+								</a>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+		<div class="footer-text">
+			<p><i class='bx bxs-copyright'></i>Copyright 2024 | All Rights Reserved</p>
+		</div>
+		<div class="footer-topIcon">
+			<a href="#container"><i class='bx bxs-up-arrow-square'></i></a>
+		</div>
+	</footer>
+
+		<script>
+			function validate() {
+				var id = document.getElementById("id").value;
+				var password = document.getElementById("password").value;
+
+				if (id == null || id == '') {
+					alert("Id field should not be empty");
+					return false;
+				}
+
+				if (password == null || password == '') {
+					alert("Password field should not be empty");
+					return false;
+				}
+				return true;
+			}
+		</script>
+</body>
+
+</html>

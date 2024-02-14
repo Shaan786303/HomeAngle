@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Register</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+	<header class="header">
+		<a th:href="@{/}">
+			<div class=logo><img src="image/logo.png"></div>
+		</a>
+		<nav class="nav">
+			<a th:href="@{/userloginpage}"><i class='bx bx-home'></i>LOGIN</a>
+			<a href="#" class="active"><i class='bx bxs-user'></i>REGISTER</a>
+		</nav>
+	</header>
+
+	<div class="container" id="container">
+		<div class="card">
+			<div class="inne,r-box" id="card">
+				<div class="register">
+					<h2>USER REGISTER</h2>
+					<form action="#" th:action="@{/saveregister}" th:object="${userregister}" method="POST" onsubmit="return validate()">
+						<input type="text" th:field="*{userid}" placeholder="UserID" title="Enter UserId" id="id" class="input">
+						<input type="text" th:field="*{name}" placeholder="Name" title="Enter Name" id="name" class="input">
+						<input type="email" th:field="*{email}" placeholder="Email" title="Enter Email" id="email" class="input">
+						<input type="password" th:field="*{password}" placeholder="Password" title="Enter Password" id="password" class="input">
+						<input type="text" th:field="*{contact}" placeholder="Contact" title="Enter Contact" id="contact" class="input">
+						<input type="text" th:field="*{address}" placeholder="Address" title="Enter Address" id="address" class="input">
+						<button type="submit" class="sbutton" title="Register">REGISTER</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer-text">
+			<p><i class='bx bxs-copyright'></i>Copyright 2024 | All Rights Reserved</p>
+		</div>
+		<div class="footer-topIcon">
+			<a href="#container"><i class='bx bxs-up-arrow-square'></i></a>
+		</div>
+	</footer>
+
+	<script src="/javascript/script.js"></script>
+</body>
+
+</html>

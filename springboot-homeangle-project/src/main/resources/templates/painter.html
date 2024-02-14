@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Handyman</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body class="painbac">
+	<div class="container my-2">
+		<h1 class="bold">PAINTER'S LIST</h1>
+		<a th:href="@{/addpainter}" class="btn btn-primary btn-sm mb-3"> ADD PAINTER </a>
+
+		<table border="1" class="table table-striped table-dark">
+			<thead>
+				<tr>
+					<th>Painter_Id</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Contact</th>
+					<th>Address</th>
+					<th>Experience</th>
+					<th>Fees</th>
+					<th> Actions </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="painter : ${listPainter}">
+					<td th:text="${painter.id}"></td>
+					<td th:text="${painter.name}"></td>
+					<td th:text="${painter.email}"></td>
+					<td th:text="${painter.contact}"></td>
+					<td th:text="${painter.address}"></td>
+					<td th:text="${painter.experience}"></td>
+					<td th:text="${painter.fees}"></td>
+					<td> <a th:href="@{/showPainUpdateForm/{id}(id=${painter.id})}" class="btn btn-primary">Update</a>
+						<a th:href="@{/deletePainter/{id}(id=${painter.id})}" class="btn btn-danger">Delete</a>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>

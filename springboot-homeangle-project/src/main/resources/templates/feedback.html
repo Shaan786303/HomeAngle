@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Feedback</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/style1.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+	<header class="header">
+		<a th:href="@{/}">
+			<div class=logo><img src="image/logo.png"></div>
+		</a>
+		<nav class="nav">
+			<a class="active"><i class='bx bxs-edit-alt'></i>FEEDBACK </a>
+		</nav>
+	</header>
+
+	<section class="contact" id="contact">
+		<h2 class="heading">Contact Us & Share Feedback</h2>
+
+		<form onsubmit="sendEmail(); reset(); return false">
+			<div class="input-box"><i class='bx bxs-user'></i><input id="name" type="text" placeholder="Full Name"
+					required>
+			</div>
+			<div class="input-box"><i class='bx bxs-phone'></i><input id="phone" type="number" placeholder="Mob No"
+					required></div>
+			<div class="input-box"><i class='bx bxs-envelope'></i><input id="email" type="email"
+					placeholder="Email Address" required></div>
+			<div class="input-box"><i class='bx bx-mail-send'></i><input id="subject" type="text"
+					placeholder="Email Subject" required></div>
+			<div class="input-box"><i class='bx bx-text'></i><textarea id="message" cols="30" rows="10"
+					placeholder="Type Your Message Here" required></textarea></div>
+			<input class="btnss"  type="submit" value="Send Message"></input>
+			<input class="btnss" type="reset" value="Reset Message"></input>
+		</form>
+
+		<div class="contacts">
+			<div class="social-media">
+				<a href="https://www.facebook.com/profile.php?id=100070049195331" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+				<a href="https://www.instagram.com/shaan786303/" target="_blank"><i class='bx bxl-instagram'></i></a>
+				<a href="mailto:mdshaan786303@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+				<a href="https://github.com/Shaan786303" target="_blank"><i class='bx bxl-github'></i></a>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer-text">
+			<p><i class='bx bxs-copyright'></i>Copyright 2024 | All Rights Reserved</p>
+		</div>
+		<div class="footer-topIcon">
+			<a href="#contact"><i class='bx bxs-up-arrow-square'></i></a>
+		</div>
+	</footer>
+
+	<script src="https://smtpjs.com/v3/smtp.js">
+
+		function sendEmail() {
+
+			Email.send({
+
+				SecureToken: "4972c7ca-28b8-411e-9eda-ae4bfe98b6ac",
+				To: 'mdshaan786303@gmail.com',
+				From: "mdshaan786303@gmail.com",
+				Subject: "For Query",
+				Body: "Name: " + document.getElementById("name").value
+					+ "<br> Mob No: " + document.getElementById("phone").value
+					+ "<br> Email: " + document.getElementById("email").value
+					+ "<br> Subject: " + document.getElementById("subject").value
+					+ "<br> Message: " + document.getElementById("message").value
+			}).then(
+				message => alert("message sent")
+				
+			);
+
+		}
+	</script>
+</body>
+
+</html>

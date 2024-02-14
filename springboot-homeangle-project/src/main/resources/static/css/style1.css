@@ -1,0 +1,324 @@
+*
+{
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
+}
+
+.elecbac
+{
+    background-image: url(/image/elecbac.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.plumbac
+{
+    background-image: url(/image/plumbac.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carpbac
+{
+    background-image: url(/image/carpbac.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.painbac
+{
+    background-image: url(/image/painbac.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bac
+{
+    background-image: linear-gradient( to right,rgb(5, 150, 218),rgb(235, 20, 56),rgb(255, 168, 6));
+}
+
+.bold
+{
+	font-family: serif;
+	font-weight: bold;
+	color:rgb(0, 0, 0);
+	text-align: center;
+	text-decoration: underline dashed yellow;
+	text-shadow: 4px 4px rgb(255, 255, 0);
+}
+
+section
+{
+    min-height: 100vh;
+    padding:10rem 10% 2rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 300px;
+    height: 400px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 7px 15px rgb(0, 0, 0);
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-header {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-header img {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.392);
+    height: 200px;
+    object-fit:contain;
+  }
+  
+  .card-header img:hover
+  {
+	  background-color: rgb(255, 255, 128);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-body h2 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card-body p {
+    color: #666;
+  }
+  
+  /* Keyframe animation for card hover effect */
+  @keyframes hoverAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .card:hover {
+    animation: hoverAnimation 2s ;
+    -webkit-animation: hoverAnimation 2s ;
+}
+
+.contact{
+	align-items: center;
+	margin-bottom: 5rem;
+}
+
+.contact h2{
+    font-size: 30px;
+    font-family: serif;
+    text-align: center;
+    color:white;
+}
+
+.contact form{
+    max-width:35rem;
+    margin:1rem auto;
+    text-align:center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box
+{
+    display: flex;
+    width:100%;
+    margin-bottom: 15px;
+}
+
+.contact form .input-box input, .contact form .input-box textarea{
+	align-items: center;
+    width:100%;
+    outline: none;
+    padding:10px;
+    font-size: 1.6rem;
+    color:var(--text-color);
+    background: rgb(0, 0, 0);
+    border-radius:0px 15px 5px 0px;
+}
+
+.contact form .input-box input:focus{
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.contact form .input-box textarea:focus{
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.input-box i{
+    padding:10px;
+    background:var(--main-color);
+    color:white;
+    text-align: center;
+    min-width:50px;
+    font-size: 2rem;
+    border-radius:5px 0px 0px 15px;
+
+}
+
+.contact form .input-box input{
+    width:100%;
+    padding:5px;
+}
+
+.contact form textarea{
+    resize:none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    cursor:pointer;
+    margin-inline: 10px;
+     background-color: black;
+}
+
+.contact form .btn:hover
+{
+	border-color: aqua;
+	color: black;
+	
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:3rem;
+    height:3rem;
+    background: transparent;
+    border:.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size:2rem;
+    color:var(--main-color);
+    margin: 0.5rem 1.5rem 3rem 0;
+    transition: .5s ease;
+    text-decoration: none;
+}
+
+.social-media a:hover{
+    background:var(--main-color);
+    color:black;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.contacts .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnss{
+    display: inline-block;
+    padding:0.5rem 2.8rem;
+    border-radius: 4rem;
+    background-color: black;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.5rem;
+    color:white;
+    font-weight:300;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.btnss:hover{
+    box-shadow: none;
+    color: var(--main-color);
+}
+
+.contact form .btnss{
+    margin-top: 1rem;
+    cursor:pointer;
+    margin-inline: 5px;
+}
+
+
+ .phone a{
+    position:fixed;
+    top:15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border:.2rem solid var(--main-color);
+    width:4rem;
+    height:4rem;
+    text-decoration: none;
+    font-size:3rem;
+    color:var(--main-color);
+    transition: .5s ease;
+}
+
+.phone a:hover{
+    background:var(--text-color);
+    box-shadow: 0 0 1rem var(--main-color);
+    width:6rem;
+    color:var(--second-bg-color);
+    border-radius: 0px 20px 50px 0px;
+
+}
+
+.whatsapp a{
+
+    position:fixed;
+    top:20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border:.2rem solid var(--main-color);
+    width:4rem;
+    height:4rem;
+    text-decoration: none;
+    font-size:3rem;
+    color:var(--main-color);
+    transition: .5s ease;
+}
+
+.whatsapp a:hover{
+    background:var(--text-color);
+    box-shadow: 0 0 1rem var(--main-color);
+    width:6rem;
+    color:green;
+    border-radius: 0px 50px 20px 0px;
+}
+
+#loading{
+    position: fixed;
+    width:100%;
+    height:100vh;
+    background:#020b3b url(/image/load.gif) no-repeat center;
+    z-index: 99999;
+}
+
+
+
+
+
+
+
+

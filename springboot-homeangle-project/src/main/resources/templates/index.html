@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style1.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body onload="myFunc()" id="up">
+	<div id="loading"></div>
+	<header class="header">
+		<a th:href="@{/}">
+			<div class=logo><img src="image/logo.png"></div>
+		</a>
+		<nav class="nav">
+			<a th:href="@{/userloginpage}"><i class='bx bxs-user'></i>USER</a>
+			<a th:href="@{/adminpage}"><i class='bx bxs-home'></i>ADMIN</a>
+		</nav>
+	</header>
+
+	<div class="banner-container" id="banner-container">
+		<h1 class="text1">HOMEANGLE</h1>
+		<h2 class="text2"></h2>
+	</div>
+
+
+	<div class="hman">
+		<h2>HANDYMAN'S</h2>
+	</div>
+
+	<div class="style-content">
+		<div class="style-box">
+			<img src="image/electrician.png" alt="">
+			<div class="style-layer">
+				<a th:href="@{/electriciandatapage}">
+					<h4>ELECTRICIAN</h4>
+				</a>
+				<p>An electrician is a person whose job is to install and repair electrical equipment. Ready to help U
+				</p>
+			</div>
+		</div>
+
+		<div class="style-box">
+			<img src="image/plumber.png" alt="">
+			<div class="style-layer">
+				<a th:href="@{/plumberdatapage}">
+					<h4>PLUMBER</h4>
+				</a>
+				<p>A plumber is someone whose job includes fixing pipes and installing water and sewage systems. Ready
+					to help U</p>
+			</div>
+		</div>
+
+		<div class="style-box">
+			<img src="image/carpenter.png" alt="">
+			<div class="style-layer">
+				<a th:href="@{/carpenterdatapage}">
+					<h4>CARPENTER</h4>
+				</a>
+				<p>A carpenter is a person who makes and repairs wooden objects and structures. Ready to help U</p>
+			</div>
+		</div>
+
+		<div class="style-box">
+			<img src="image/painter.png" alt="">
+			<div class="style-layer">
+				<a th:href="@{/painterdatapage}">
+					<h4>PAINTER</h4>
+				</a>
+				<p>A painter is a person who paints and decorates houses. Ready to help U</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="phone">
+		<a href="tel:7004286343" target="_blank"><i class='bx bxs-phone'></i></a>
+	</div>
+
+	<div class="whatsapp">
+		<a href="https://wa.me/917004286343" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+	</div>
+
+	<footer class="footer">
+		<div class="footer-text">
+			<p><i class='bx bxs-copyright'></i>Copyright 2024 | All Rights Reserved</p>
+		</div>
+		<div class="footer-topIcon">
+			<a href="#up"><i class='bx bxs-up-arrow-square'></i></a>
+		</div>
+	</footer>
+
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+	<script src="javascript/script.js"></script>
+</body>
+
+</html>

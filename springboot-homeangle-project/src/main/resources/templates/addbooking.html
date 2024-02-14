@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Booking</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+	<div class="container" id="container">
+		<div class="card">
+			<div class="inne,r-box" id="card">
+				<div class="register">
+					<h2>BOOKING HANDYMAN'S</h2>
+					<form action="#" th:action="@{/savebooking}" th:object="${savebook}" method="POST"
+						onsubmit="return validate()">
+						<input type="text" th:field="*{id}" placeholder="Booking ID" title="Enter Booking ID" id="id"
+							class="input">
+						<input type="date" th:field="*{date}" placeholder="Booking Date" title="Enter Booking Date"
+							id="date" class="input">
+						<input type="text" th:field="*{status}" placeholder="Booking Status"
+							title="Enter Booking Status" id="status" class="input">
+						<button type="submit" class="sbutton" title="Book Handyman">BOOK</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function validate() {
+			var id = document.getElementById("id").value;
+			var date = document.getElementById("date").value;
+			var status = document.getElementById("status").value;
+			if (id == null || id == '') {
+				alert("Id field should not be empty");
+				return false;
+			}
+			if (date == null || date == '') {
+				alert("Date field should not be empty");
+				return false;
+			}
+			if (status == null || status == '') {
+				alert("Status field should not be empty");
+				return false;
+			}
+			return true;
+		}
+	</script>
+</body>
+
+</html>

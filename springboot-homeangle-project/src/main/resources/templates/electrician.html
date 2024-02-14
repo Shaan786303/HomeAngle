@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handyman</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		 <link rel="stylesheet" href="css/style1.css">
+</head>
+<body class="elecbac">
+    <div class="container my-2">
+		<h1 class="bold">ELECTRICIAN'S LIST</h1>
+		<a th:href="@{/addelectrician}" class="btn btn-primary btn-sm mb-3"> ADD ELECTRICIAN </a>
+		<table border="1" class="table table-striped table-dark">
+			<thead>
+				<tr>
+					<th>Electrician_Id</th>
+					<th>Name</th>
+					<th>Email</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th>Experience</th>
+                    <th>Fees</th>
+					<th> Actions </th>
+				</tr>
+			</thead>
+            <tbody>
+				<tr th:each="electrician : ${listElectrician}">
+					<td th:text="${electrician.id}"></td>
+					<td th:text="${electrician.name}"></td>
+                    <td th:text="${electrician.email}"></td>
+                    <td th:text="${electrician.contact}"></td>
+                    <td th:text="${electrician.address}"></td>
+                    <td th:text="${electrician.experience}"></td>
+					<td th:text="${electrician.fees}"></td>
+					<td> <a th:href="@{/showElecUpdateForm/{id}(id=${electrician.id})}" class="btn btn-primary">Update</a>
+						<a th:href="@{/deleteElectrician/{id}(id=${electrician.id})}" class="btn btn-danger">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+        </table>
+	</div>
+</body>
+</html>
